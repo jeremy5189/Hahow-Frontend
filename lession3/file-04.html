@@ -2,9 +2,24 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>頁面標題</title>
+        <title>IMG 圖片</title>
     </head>
     <body>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+        <h1>外部絕對路徑: http://i.imgur.com/LC0hlCR.png</h1>
+        <h2>重點：須為 direct link (通常網址結尾為圖片副檔名)</h2>
+        <img src="http://i.imgur.com/LC0hlCR.png"/>
+        <br/><!-- 換行 -->
+
+        <h1>內部相對路徑: ../images/hahow-logo.png</h1>
+        <h2>重點：一旦網頁檔案路徑改變及無法使用</h2>
+        <img src="../images/hahow-logo.png">
+        <br/><!-- 換行 -->
+
+        <h1>內部絕對路徑: /images/hahow-logo.png</h1>
+        <h2>重點：只能在網頁伺服器環境下使用，開頭 / 代表網頁根目錄(web root)，下圖無法顯示系正常現象</h2>
+        <img src="/images/hahow-logo.png">
+        <br/><!-- 換行 -->
+
     </body>
 </html>
