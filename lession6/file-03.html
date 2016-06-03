@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- 行動裝置支援 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bootstrap Table</title>
+
+    <!-- Bootstrap -->
+    <link href="../library/css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container">
+
+        <h1>Foobar Express 車次表</h1>
+
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>出發地</th>
+                    <th>目的地</th>
+                    <th>出發</th>
+                    <th>抵達</th>
+                    <th>票價</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <!-- 第一列 -->
+                <tr>
+                    <td>FBE 353</td>
+                    <td>Foo Hbf</td>
+                    <td>Bar Hbf</td>
+                    <td>08:49</td>
+                    <td>10:22</td>
+                    <td>
+                        <button class="btn btn-danger btn-xs">經濟艙 19</button>
+                        <button class="btn btn-primary btn-xs">商務艙 39</button>
+                    </td>
+                </tr>
+
+                <!-- 第二列 -->
+                <tr>
+                    <td>FBE 983</td>
+                    <td>Foobar Hbf</td>
+                    <td>Barcode Hbf</td>
+                    <td>10:21</td>
+                    <td>13:45</td>
+                    <td>
+                        <button class="btn btn-danger btn-xs">經濟艙 39</button>
+                        <button class="btn btn-primary btn-xs">商務艙 69</button>
+                    </td>
+                </tr>
+
+                <!-- 第三列 -->
+                <tr>
+                    <td>FBE 125</td>
+                    <td>Bar Hbf</td>
+                    <td>Foo Hbf</td>
+                    <td>17:49</td>
+                    <td>21:22</td>
+                    <td>
+                        <button class="btn btn-danger btn-xs">經濟艙 29</button>
+                        <button class="btn btn-primary btn-xs">商務艙 49</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+  </body>
+</html>

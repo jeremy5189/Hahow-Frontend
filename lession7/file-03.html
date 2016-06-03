@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    var score = prompt('請輸入成績');
+
+    if( score < 60 ) {
+        var ret = confirm('你要被當了，你說我很帥就放過你');
+
+        if( ret ) {
+            score = 60;
+            alert('不錯不錯，調分到 60 分');
+        } else {
+            alert('你死定了，你被當了！');
+        }
+    }
+    else {
+        alert('你及格了!');
+    }
+
+    // 宣告一個空物件
+var emptyObj = {};
+
+// 宣告一個物件紀錄車子
+var car = {
+    id: '001',
+    color: 'red',
+    brand: 'foobar',
+    price: 100000
+};
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
