@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../library/js/jquery-2.2.4.js"></script>
+    <script>
+    // 等候 Document Ready 事件
+    $(function() {
+        // 監聽 #button 的 click 事件
+        $(document).on('click', '#button', function(event) {
+
+            // 按鈕被 Click 後觸發
+            // 取得文字框內職
+            var to_change = $('#textbox').val();
+
+            // 設定 H1 HTML
+            $('#title').html(to_change);
+
+            // 清空 textbox
+            $('#textbox').val('');
+
+        });
+    });
+    </script>
+</head>
+<body>
+    <h1 id="title">我是標題</h1>
+    <form>
+        <input type="text" id="textbox" placeholder="改標題">
+        <input type="button" id="button" value="OK!">
+    </form>
+</body>
+</html>

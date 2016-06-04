@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../library/js/jquery-2.2.4.js"></script>
+    <script>
+
+    // 純 JS 方法
+    function ready() {
+        var element = document.getElementById('header1');
+        element.innerHTML = 'Header 1 Changed';
+    }
+
+    // jQuery Document Ready
+    $(function() {
+        $('#header2').html('Header 2 Changed');
+    });
+
+    </script>
+</head>
+<body onload="ready()">
+    <h1 id="header1">Header 1</h1>
+    <h1 id="header2">Header 2</h1>
+</body>
+</html>
