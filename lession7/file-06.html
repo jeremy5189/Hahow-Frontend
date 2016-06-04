@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+    // 宣告一個空物件
+    var emptyObj = {};
+
+    // 宣告一個物件紀錄車子
+    var car = {
+        id: '001',
+        color: 'red',
+        brand: 'foobar',
+        price: 100000
+    };
+
+    console.log(car);
+    console.log(car.id);
+    console.log(car.color);
+
+    var JSONstr = JSON.stringify(car);
+    console.log(JSONstr);
+    var obj = JSON.parse(JSONstr);
+    console.log(obj.id);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

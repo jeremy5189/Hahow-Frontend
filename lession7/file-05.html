@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
     <script>
+
+    function checkScore(score) {
+
+        if( score < 60 ) {
+            return false;
+        }
+        else {
+            return true;
+        }
+
+    }
+
+    console.log('60 分傳入 checkScore 的結果為 ' + checkScore(60));
+    console.log('59 分傳入 checkScore 的結果為 ' + checkScore(59));
+
     var score = prompt('請輸入成績');
 
-    if( score < 60 ) {
+    // ! = 相反運算 NOT， !false = true, !true = false
+    if( !checkScore(score) ) {
 
         var ret = confirm('你要被當了，你說我很帥就放過你');
 
@@ -21,6 +37,7 @@
     else {
         alert('你及格了!');
     }
+
     </script>
 </head>
 <body>
