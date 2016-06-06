@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../library/js/jquery-2.2.4.js"></script>
+    <script>
+    // 等候 Document Ready 事件
+    $(function() {
+        
+        // val() 取得 input 值
+        var val = $('#textbox').val();
+        console.log(val);
+
+        // html() 取得 html 內容
+        var title = $('#title').html();
+        console.log(title);
+
+        // 取得屬性值
+        var attr = $('#textbox').attr('placeholder');
+        console.log(attr);
+        // 修改屬性
+        $('#textbox').attr('placeholder', '改屬性囉');
+        // 清空
+        $('#textbox').val('');
+
+        // Append
+        $('#form').append('<br/><input type="button" id="button" value="Append 第二個按鈕">');
+
+    });
+    </script>
+</head>
+<body>
+    <h1 id="title">我是標題</h1>
+    <form id="form">
+        <input type="text" id="textbox" placeholder="改標題" value="test">
+        <input type="button" id="button" value="OK!">
+    </form>
+</body>
+</html>
