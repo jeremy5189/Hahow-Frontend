@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- 行動裝置支援 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>網站後台儀表板</title>
+
+    <link rel="stylesheet" href="../library/css/bootstrap.css">
+    <script src="../library/js/jquery-2.2.4.js"></script>
+    <script src="../library/js/bootstrap.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="sidebar.css" rel="stylesheet">
+
+    <style>
+    .glyphicon {
+        margin-left: -20px;
+        top: 2px;
+    }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        網站後台儀表板
+                    </a>
+                </li>
+                <li>
+                    <a href="#">主控台</a>
+                </li>
+                <li>
+                    <a href="#">使用者管理</a>
+                </li>
+                <li>
+                    <a href="#">文章管理</a>
+                </li>
+                <li>
+                    <a href="#">留言管理</a>
+                </li>
+                <li>
+                    <a href="#">網站設定</a>
+                </li>
+                <li>
+                    <a href="#">登出</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- 頁面內容 -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Simple Sidebar</h1>
+                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

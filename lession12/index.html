@@ -12,6 +12,9 @@
     <script src="../library/js/jquery-2.2.4.js"></script>
     <script src="../library/js/bootstrap.js"></script>
 
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
     <!-- Custom CSS -->
     <link href="sidebar.css" rel="stylesheet">
 
@@ -19,6 +22,21 @@
     .glyphicon {
         margin-left: -20px;
         top: 2px;
+        margin-right: 5px;
+    }
+    .page-header {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 15px;
+    }
+    .breadcrumb {
+        margin-bottom: 0;
+    }
+    .table {
+        margin-bottom: 0;
+    }
+    #container {
+
     }
     </style>
 </head>
@@ -36,22 +54,22 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">主控台</a>
+                    <a href="#"><span class="glyphicon glyphicon-home"></span>主控台</a>
                 </li>
                 <li>
-                    <a href="#">使用者管理</a>
+                    <a href="#"><span class="glyphicon glyphicon-user"></span>使用者管理</a>
                 </li>
                 <li>
-                    <a href="#">文章管理</a>
+                    <a href="#"><span class="glyphicon glyphicon-edit"></span>文章管理</a>
                 </li>
                 <li>
-                    <a href="#">留言管理</a>
+                    <a href="#"><span class="glyphicon glyphicon-comment"></span>留言管理</a>
                 </li>
                 <li>
-                    <a href="#">網站設定</a>
+                    <a href="#"><span class="glyphicon glyphicon-cog"></span>網站設定</a>
                 </li>
                 <li>
-                    <a href="#">登出</a>
+                    <a href="#"><span class="glyphicon glyphicon-log-in"></span>登出</a>
                 </li>
             </ul>
         </div>
@@ -60,14 +78,109 @@
         <!-- 頁面內容 -->
         <div id="page-content-wrapper">
             <div class="container-fluid">
+
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1>Simple Sidebar</h1>
-                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                        <ol class="breadcrumb">
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">Library</a></li>
+                          <li class="active">Data</li>
+                        </ol>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="page-header">
+                            <h2><small>最近登入紀錄</small></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>登入帳號</th>
+                                    <th>瀏覽器</th>
+                                    <th>IP</th>
+                                    <th>時間</th>
+                                    <th>Opr</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>001</td>
+                                    <th>admin</th>
+                                    <th>Chrome </th>
+                                    <th>192.168.1.1</th>
+                                    <th>2016-01-01 13:46</th>
+                                    <th>
+                                        <button class="btn btn-danger btn-xs">標示可疑</button>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>001</td>
+                                    <th>admin</th>
+                                    <th>Chrome </th>
+                                    <th>192.168.1.1</th>
+                                    <th>2016-01-01 13:46</th>
+                                    <th>
+                                        <button class="btn btn-danger btn-xs">標示可疑</button>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>001</td>
+                                    <th>admin</th>
+                                    <th>Chrome </th>
+                                    <th>192.168.1.1</th>
+                                    <th>2016-01-01 13:46</th>
+                                    <th>
+                                        <button class="btn btn-danger btn-xs">標示可疑</button>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>001</td>
+                                    <th>admin</th>
+                                    <th>Chrome </th>
+                                    <th>192.168.1.1</th>
+                                    <th>2016-01-01 13:46</th>
+                                    <th>
+                                        <button class="btn btn-danger btn-xs">標示可疑</button>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>001</td>
+                                    <th>admin</th>
+                                    <th>Chrome </th>
+                                    <th>192.168.1.1</th>
+                                    <th>2016-01-01 13:46</th>
+                                    <th>
+                                        <button class="btn btn-danger btn-xs">標示可疑</button>
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="page-header">
+                            <h2><small>近七天訪客流量</small></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="container"></div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
         <!-- /#page-content-wrapper -->
@@ -76,9 +189,60 @@
 
     <!-- Menu Toggle Script -->
     <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+    $(function () {
+
+        // AJAX
+        // functioln(rep) {
+
+        $('#container').highcharts({
+
+            title: {
+                text: '最近七天訪客流量',
+                x: -20 // 文字置中
+            },
+
+            subtitle: {
+                text: '網站後台儀表板',
+                x: -20
+            },
+
+            xAxis: {
+                categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+            },
+
+            yAxis: {
+                title: {
+                    text: '流量'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+
+            tooltip: {
+                valueSuffix: '次'
+            },
+
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+
+            series: [
+            {
+                name: 'Page View',
+                data: [545, 544, 454, 445, 780, 311, 83]
+            },
+            {
+                name: '不重複瀏覽訪客',
+                data: [94, 234, 563, 743, 352, 435]
+            }]
+
+        });
     });
     </script>
 
